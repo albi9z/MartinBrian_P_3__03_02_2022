@@ -1,59 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
+@import "./sass/base/base.scss";
+@import "./sass/layout/header.scss";
+@import "./sass/layout/paris_belleville.scss";
+@import "./sass/layout/acceuille.scss";
+@import "./sass/composants/filtres.scss";
 
-body{
-    margin: 0;
-    font-family: "Roboto", sans-serif;
-}
-
-h1 {
-  background-color: aliceblue;
-}
-
-header{
-    font-family: "Shrikhand", cursive;
-    text-align: center;
-    box-shadow: 0 0 0.5rem grey;
-    padding: 0.3rem;
-    position: relative;
-}
-
-.paris_belleville{
-    text-align: center;
-    background-color: #f3f3f3;
-    padding: 0.5rem;
-}
-
-.acceuille{
-    text-align: center;
-}
-
-.acceuille h2{
-    margin-top: 2rem;
-    font-size: 30px;
-}
-
-.acceuille p{
-    font-size: 20px;
-}
-
-.acceuille button{
-    margin-top: 20px;
-    color: #fff;
-    font-weight: 300;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 50px;
-    box-shadow: 0 0 15px -5px black;
-    font-size: 20px;
-    background-image: linear-gradient(to top, rgba(145, 86, 216, 0.9),
-    rgba(250, 117, 212, 0.9));
-    transition : transform 200ms;    
-}
-
-.acceuille button:hover{
-  transform: scale(1.02);
-  opacity: 0.9;
-}
 
 
