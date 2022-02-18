@@ -3,7 +3,6 @@
 @import "../utils/zoom.scss";
 
 .filtres{
-    counter-reset: "filtres";
     & ol{
         display: flex;
         flex-wrap: wrap;
@@ -13,12 +12,11 @@
         }
     }
     & li{
-        &::before{
-            content: counter(filtres);
-            counter-increment: "filtres";
+        &::before {
             color: #fff;
             background-color: purple;
-            padding: 0.5rem;
+            width: 1rem;
+            height: 1rem;
             border-radius: 50px;
         }
         list-style-type: none;
