@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,MAAM,CAAC;EACH,gBAAgB,EAAE,OAAO;CAM5B;;AAPD,AAGA,MAHM,CAGN,WAAW,CAAA;EACP,MAAM,EAAE,eAAe;EACvB,MAAM,EAAE,IAAI;CACd",
+    "mappings": "AAEA,AAAA,gBAAgB,CAAC;EACb,gBAAgB,EAAE,OAAO;CAc5B;;AAfD,AAGA,gBAHgB,CAGhB,UAAU,CAAA;EACN,OAAO,EAAE,IAAI;EACb,GAAG,EAAE,MAAM;EACX,UAAU,EAAE,UAAU;EACtB,OAAO,EAAE,MAAM;CAOjB;;AAdF,AASA,gBATgB,CAGhB,UAAU,CAMV,cAAc,CAAA;EACV,MAAM,EAAE,eAAe;EACvB,MAAM,EAAE,KAAK;ECZb,UAAU,EAAG,sBAAsB;CDcpC",
     "sources": [
-        "card_menus.scss"
+        "card_menus.scss",
+        "../utils/box-shadow.scss"
     ],
     "names": [],
     "file": "card_menus.css"

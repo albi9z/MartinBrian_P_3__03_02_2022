@@ -1,9 +1,20 @@
-.menus {
+.container_menus {
   background-color: #f6f6f6;
 }
 
-.menus .card_menus {
+.container_menus .box_menus {
+  display: -ms-grid;
+  display: grid;
+  gap: 1.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.container_menus .box_menus .box_m_acceuil {
   border: solid 1px black;
-  height: 4rem;
+  height: 200px;
+  -webkit-box-shadow: 2px 1px 8px -3px black;
+          box-shadow: 2px 1px 8px -3px black;
 }
 /*# sourceMappingURL=card_menus.css.map */
