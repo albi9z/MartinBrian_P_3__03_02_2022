@@ -6,48 +6,84 @@ body {
   padding: 0 5px;
 }
 
-header {
-  font-family: "Shrikhand", cursive;
-  text-align: center;
-  box-shadow: 0 0 0.5rem grey;
-  padding: 0.3rem;
-  position: relative;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.paris_belleville {
-  text-align: center;
-  background-color: #f3f3f3;
-  padding: 0.5rem;
+.container_menus {
+  background-color: #f6f6f6;
 }
-.paris_belleville i {
-  font-size: 20px;
+.container_menus .menus {
+  display: grid;
+  gap: 1.5rem;
+  padding: 0 15px;
 }
-
-.acceuille {
-  text-align: center;
-}
-.acceuille h2 {
-  margin-top: 2rem;
-  font-size: 30px;
-}
-.acceuille p {
-  font-size: 20px;
-}
-.acceuille button {
-  margin-top: 20px;
-  color: #fff;
-  font-weight: 300;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 50px;
-  font-size: 20px;
-  background-image: linear-gradient(to top, rgba(145, 86, 216, 0.9), rgba(250, 117, 212, 0.9));
-  transition: transform 200ms;
+.container_menus .menus .repas {
+  height: 330px;
+  border-radius: 20px;
   box-shadow: 2px 1px 8px -3px black;
 }
-.acceuille button:hover {
-  transform: scale(1.02);
-  opacity: 0.9;
+.container_menus .menus .logo {
+  position: relative;
+}
+.container_menus .menus .logo::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  background-color: #99E2D0;
+  color: #278870;
+  display: grid;
+  place-items: center;
+  right: 15px;
+  top: 15px;
+}
+.container_menus .img-1 {
+  background-image: url(../../pictures/menu-1.jpg);
+  height: 250px;
+  border-radius: 20px 20px 0px 0px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container_menus .img-2 {
+  background-image: url(../../pictures/menu-2.jpg);
+  height: 250px;
+  border-radius: 20px 20px 0px 0px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container_menus .img-3 {
+  background-image: url(../../pictures/menu-3.jpg);
+  height: 250px;
+  border-radius: 20px 20px 0px 0px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container_menus .img-4 {
+  background-image: url(../../pictures/menu-4.jpg);
+  height: 250px;
+  border-radius: 20px 20px 0px 0px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container_menus .txt_rps {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+.container_menus .txt_rps h3 {
+  margin: 20px 0px -10px 0px;
+}
+.container_menus .txt_rps i {
+  position: absolute;
+  font-size: 25px;
+  right: 20px;
+  top: 10px;
 }
 
 .filtres {
@@ -70,10 +106,10 @@ header {
   content: counter(filtres);
   counter-increment: "filtres";
   color: #fff;
-  background-color: purple;
+  background-color: #9356DC;
   border-radius: 50px;
   display: grid;
-  place-items: center;
+  align-items: center;
   position: absolute;
   width: 1rem;
   height: 1rem;
@@ -87,22 +123,47 @@ header {
   font-size: 20px;
 }
 
-.container_menus {
-  background-color: #f6f6f6;
+header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0 0 0.5rem grey;
+  padding: 0.3rem;
+  position: relative;
 }
-.container_menus .box_menus {
-  display: grid;
-  gap: 1.5rem;
-  box-sizing: border-box;
-  padding: 0 15px;
+
+.paris_belleville {
+  text-align: center;
+  background-color: #f3f3f3;
+  padding: 0.5rem;
 }
-.container_menus .box_menus .box_m_acceuil {
-  border: solid 1px black;
-  height: 200px;
+.paris_belleville i {
+  font-size: 20px;
+}
+
+.acceuil {
+  text-align: center;
+}
+.acceuil h2 {
+  margin-top: 2rem;
+  font-size: 30px;
+}
+.acceuil p {
+  font-size: 20px;
+}
+.acceuil .btn {
+  margin-top: 20px;
+  color: #fff;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 20px;
+  background-image: linear-gradient(to top, rgba(145, 86, 216, 0.9), rgba(250, 117, 212, 0.9));
   box-shadow: 2px 1px 8px -3px black;
 }
-.container_menus .box_menus .box_m_acceuilbo_image {
-  background-image: url(../restaurants/jay-wennington.jpg.jpg);
+.acceuil .btn:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 
 /*# sourceMappingURL=style.css.map */

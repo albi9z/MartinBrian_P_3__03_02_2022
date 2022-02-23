@@ -1,7 +1,8 @@
 
-@import "../utils/box-shadow.scss";
+@import "../utils/box_shadow.scss";
 @import "../utils/zoom.scss";
 @import "../utils/variables.scss";
+@import "../utils/colors.scss";
 
 .filtres{
     counter-reset: filtres;
@@ -15,11 +16,11 @@
         &::before {
             content: counter(filtres);
             counter-increment: 'filtres';
-            color: #fff;
-            background-color: purple;
+            color: $white;
+            background-color: $color_primaire ;
             border-radius: 50px;
             display: grid;
-            place-items: center;
+            align-items: center;
             position: absolute;
             width:$acceuil-height;
             height:$acceuil-height;
@@ -29,8 +30,8 @@
         background-color: #f6f6f6;
         padding: 1.5rem 2rem;
         border-radius: 15px;
-        @include shadow;
-        &:hover{
+        @include shadow_acceuil; 
+        &:hover {
          @include zoom;
         }
         & i.fas{

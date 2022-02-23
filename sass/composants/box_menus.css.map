@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,gBAAgB,CAAC;EACb,gBAAgB,EAAE,OAAO;CAoB1B;;AArBH,AAGA,gBAHgB,CAGhB,EAAE,CAAC;EAAE,aAAa,EAAE,IAAI;CAAI;;AAH5B,AAKA,gBALgB,CAKhB,UAAU,CAAC;EACP,OAAO,EAAE,IAAI;EACb,GAAG,EAAE,MAAM;EACX,UAAU,EAAE,UAAU;EACtB,OAAO,EAAE,MAAM;CAClB;;AAVD,AAYA,gBAZgB,CAYhB,cAAc,CAAC;EACV,MAAM,EAAE,KAAK;EACb,MAAM,EAAE,eAAe;CAMvB;;AApBL,AAgBK,gBAhBW,CAYhB,cAAc,CAIP,aAAa,CAAA;EACZ,gBAAgB,EAAE,oCAAoC;EACtD,MAAM,EAAE,KAAK;CACf",
+    "sources": [
+        "box_menus.scss",
+        "../utils/box_shadow.scss"
+    ],
+    "names": [],
+    "file": "box_menus.css"
+}
