@@ -1,0 +1,31 @@
+@import "../utils/mixin.scss";
+@import "../utils/colors.scss";
+
+
+.acceuil {
+         text-align: center;
+     & h2 {
+         margin-top: 2rem;
+         font-size: 30px;
+         }
+
+     & p {
+         font-size: 20px;
+         }
+     & .btn {
+         margin-top: 20px;
+         color: $white;
+         font-weight: 300;
+         padding: 1rem 2rem;
+         border: none;
+         border-radius: 50px;
+         font-size: 20px;
+        @include gradient;
+        @include shadow_acceuil;                                                                                                                                                                                                                                                                             
+         }
+
+     & .btn:hover{
+         transform: scale(1.02);
+         opacity: 0.9;
+         }
+       }

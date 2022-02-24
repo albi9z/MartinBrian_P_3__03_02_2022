@@ -1,0 +1,11 @@
+{
+  "name": "martinbrian_p_3__03_02_2022",
+  "version": "1.0.0",
+  "description": "p_3_ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch style.scss style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

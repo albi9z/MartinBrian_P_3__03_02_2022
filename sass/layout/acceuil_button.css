@@ -1,0 +1,33 @@
+.acceuil {
+  text-align: center;
+}
+
+.acceuil h2 {
+  margin-top: 2rem;
+  font-size: 30px;
+}
+
+.acceuil p {
+  font-size: 20px;
+}
+
+.acceuil button {
+  margin-top: 20px;
+  color: #fff;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 20px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(145, 86, 216, 0.9)), to(rgba(250, 117, 212, 0.9)));
+  background-image: linear-gradient(to top, rgba(145, 86, 216, 0.9), rgba(250, 117, 212, 0.9));
+  -webkit-box-shadow: 2px 1px 8px -3px black;
+          box-shadow: 2px 1px 8px -3px black;
+}
+
+.acceuilbutton:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  opacity: 0.9;
+}
+/*# sourceMappingURL=acceuil_button.css.map */

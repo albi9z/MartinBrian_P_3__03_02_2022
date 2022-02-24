@@ -1,0 +1,91 @@
+@import "../utils/mixin.scss";
+@import "../utils/colors.scss";
+
+
+.container_menus {
+     background-color: #f6f6f6;
+     margin-bottom: 70px;
+
+   h2 {
+     box-sizing: border-box;
+     padding: 50px 0 0 20px;
+    }
+  
+.menus {
+     display: grid;
+     gap: 1.5rem;
+     padding: 0 15px; 
+
+  .repas {
+     height: 330px;
+     border-radius: 20px;
+     @include shadow_acceuil;
+    }
+ 
+.logo {
+     position: relative;
+    }
+
+  .logo::before {
+     content: "Nouveau";
+     position: absolute;
+     height: 2rem;
+     width: 5rem;
+     background-color: $color_tertiaire;
+     color: darken($color: $color_tertiaire, $amount: 40);
+     display: grid;
+     place-items: center;
+     right: 15px;
+     top: 15px;
+    }
+ }
+
+@for $i from 1 through 4 {
+   .img-#{$i} {
+     background-image: url(../../pictures/menu-#{$i}.jpg);
+     height: 250px;
+     border-radius: 20px 20px 0px 0px;
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+    }
+   }
+
+.txt_rps {
+     position: relative;
+     box-sizing: border-box;
+     padding: 0 10px;
+
+   h3 {
+     margin:20px 0px -10px 0px; 
+     }
+
+   i {
+     position: absolute;
+     font-size: 25px;
+     right: 20px;
+     top: 10px;
+     }
+    
+   .fas {
+     @include gradient;
+     background-clip: text;
+     -webkit-background-clip: text;
+     color: transparent;
+     transition: all 200ms ease-in-out;
+     opacity: 1;
+     }
+
+    &:hover .fas {
+      opacity: 0;
+      color: transparent;
+     
+    } 
+  }
+}
+ 
+
+
+
+
+

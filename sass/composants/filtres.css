@@ -1,0 +1,52 @@
+.filtres {
+  counter-reset: filtres;
+}
+
+.filtres ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.filtres li {
+  position: relative;
+  list-style-type: none;
+  background-color: #f6f6f6;
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  -webkit-box-shadow: 2px 1px 8px -3px black;
+          box-shadow: 2px 1px 8px -3px black;
+}
+
+.filtres li::before {
+  content: counter(filtres);
+  counter-increment: 'filtres';
+  color: #fff;
+  background-color: purple;
+  border-radius: 50px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  left: -0.5rem;
+}
+
+.filtres li:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.filtres li i.fas {
+  margin-right: 1rem;
+  font-size: 20px;
+}
+/*# sourceMappingURL=filtres.css.map */

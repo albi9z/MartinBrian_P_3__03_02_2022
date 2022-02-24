@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,iBAAiB,CAAA;EACb,UAAU,EAAE,MAAM;EAClB,gBAAgB,EAAE,OAAO;EACzB,OAAO,EAAE,MAAM;CAIlB;;AAPD,AAII,iBAJa,CAIX,CAAC,CAAA;EACC,SAAS,EAAE,IAAI;CAClB",
+    "sources": [
+        "paris_belleville.scss"
+    ],
+    "names": [],
+    "file": "paris_belleville.css"
+}
