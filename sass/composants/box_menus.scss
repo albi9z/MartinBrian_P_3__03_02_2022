@@ -1,5 +1,6 @@
-@import "../utils/mixin.scss";
 @import "../utils/colors.scss";
+@import "../utils/variables.scss";
+@import "../utils/mixin.scss";
 
 
 .container_menus {
@@ -15,21 +16,24 @@
      display: grid;
      gap: 1.5rem;
      padding: 0 15px; 
+     background-color: $white;
 
   .repas {
      height: 330px;
      border-radius: 20px;
      @include shadow_acceuil;
     }
+
+/*---logo_nouveau---*/    
  
-.logo {
+.logo_news {
      position: relative;
     }
 
-  .logo::before {
+  .logo_news::before {
      content: "Nouveau";
      position: absolute;
-     height: 2rem;
+     height: 30px;
      width: 5rem;
      background-color: $color_tertiaire;
      color: darken($color: $color_tertiaire, $amount: 40);
@@ -37,8 +41,10 @@
      place-items: center;
      right: 15px;
      top: 15px;
+     font-size: 16px;
     }
- }
+
+/*---image_box_repas---*/    
 
 @for $i from 1 through 4 {
    .img-#{$i} {
@@ -51,38 +57,32 @@
     }
    }
 
-.txt_rps {
+/*---texte_repas---*/   
+
+&.txt_rps {
      position: relative;
-     box-sizing: border-box;
      padding: 0 10px;
-
-   h3 {
-     margin:20px 0px -10px 0px; 
      }
 
-   i {
-     position: absolute;
-     font-size: 25px;
-     right: 20px;
-     top: 10px;
-     }
-    
-   .fas {
-     @include gradient;
-     background-clip: text;
-     -webkit-background-clip: text;
-     color: transparent;
-     transition: all 200ms ease-in-out;
-     opacity: 1;
-     }
-
-    &:hover .fas {
-      opacity: 0;
-      color: transparent;
+     &::before {     
+      @include coeur;
      
-    } 
-  }
-}
+     &::after {     
+      @include coeur;
+      @include gradient;
+     } 
+   }
+ 
+   h3 {
+    margin:20px 0px -10px 0px;
+    font-weight: bold; 
+     }
+
+   
+ }
+} 
+  
+
  
 
 
