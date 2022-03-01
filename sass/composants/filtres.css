@@ -1,5 +1,5 @@
 .filtres {
-  counter-reset: filtres;
+  counter-reset: "filtres";
 }
 
 .filtres ol {
@@ -27,7 +27,7 @@
   content: counter(filtres);
   counter-increment: 'filtres';
   color: #fff;
-  background-color: purple;
+  background-color: #9356DC;
   border-radius: 50px;
   display: -ms-grid;
   display: grid;

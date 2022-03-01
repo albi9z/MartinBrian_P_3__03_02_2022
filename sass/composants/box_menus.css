@@ -1,27 +1,150 @@
 .container_menus {
   background-color: #f6f6f6;
+  margin-bottom: 70px;
 }
 
 .container_menus h2 {
-  margin-bottom: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 50px 0 0 20px;
 }
 
-.container_menus .box_menus {
+.container_menus .menus {
   display: -ms-grid;
   display: grid;
   gap: 1.5rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   padding: 0 15px;
+  background-color: #fff;
+  /*---logo_nouveau---*/
+  /*---image_box_repas---*/
+  /*---texte_repas---*/
 }
 
-.container_menus .repas_acceuil {
-  height: 300px;
-  border: solid 1px black;
+.container_menus .menus .repas {
+  height: 330px;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 1px 8px -3px black;
+          box-shadow: 2px 1px 8px -3px black;
 }
 
-.container_menus .repas_acceuil .img_repas_ac {
-  background-image: url(../restaurants/louis-hansel.jpg);
+.container_menus .menus .logo_news {
+  position: relative;
+}
+
+.container_menus .menus .logo_news::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 30px;
+  width: 5rem;
+  background-color: #99E2D0;
+  color: #278870;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  right: 15px;
+  top: 15px;
+  font-size: 16px;
+}
+
+.container_menus .menus .img_1 {
+  background-image: url(../../pictures/menu_1.jpg);
   height: 250px;
+  border-radius: 20px 20px 0px 0px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container_menus .menus .img_2 {
+  background-image: url(../../pictures/menu_2.jpg);
+  height: 250px;
+  border-radius: 20px 20px 0px 0px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container_menus .menus .img_3 {
+  background-image: url(../../pictures/menu_3.jpg);
+  height: 250px;
+  border-radius: 20px 20px 0px 0px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container_menus .menus .img_4 {
+  background-image: url(../../pictures/menu_4.jpg);
+  height: 250px;
+  border-radius: 20px 20px 0px 0px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container_menus .menus .txt_rps {
+  padding: 0 10px;
+  position: relative;
+}
+
+.container_menus .menus .txt_rps::before {
+  cursor: pointer;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  font-size: 25px;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: inherit;
+  opacity: 1;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.container_menus .menus .txt_rps::after {
+  cursor: pointer;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f004";
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  font-size: 25px;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+}
+
+.container_menus .menus .txt_rps:hover::after {
+  opacity: 1;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.container_menus .menus .txt_rps h3 {
+  margin: 20px 0px -10px 0px;
+  font-weight: bold;
 }
 /*# sourceMappingURL=box_menus.css.map */

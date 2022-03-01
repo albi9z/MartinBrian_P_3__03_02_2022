@@ -4,7 +4,7 @@
 
 
 .container_menus {
-     background-color: #f6f6f6;
+     background-color: $lightgrey;
      margin-bottom: 70px;
 
    h2 {
@@ -47,8 +47,8 @@
 /*---image_box_repas---*/    
 
 @for $i from 1 through 4 {
-   .img-#{$i} {
-     background-image: url(../../pictures/menu-#{$i}.jpg);
+   .img_#{$i} {
+     background-image: url(../../pictures/menu_#{$i}.jpg);
      height: 250px;
      border-radius: 20px 20px 0px 0px;
      background-position: center;
@@ -59,28 +59,31 @@
 
 /*---texte_repas---*/   
 
-&.txt_rps {
-     position: relative;
+.txt_rps {
      padding: 0 10px;
+     position: relative;
+  &::before {
+     @include coeur;
      }
-
-     &::before {     
-      @include coeur;
-     
-     &::after {     
-      @include coeur;
-      @include gradient;
-     } 
+  &::after{
+    @include coeur 
+    ($opacity:0, $color:transparent, $font-weight:900);
+    @include gradient;
+    
+     }
+  &:hover::after{
+    opacity: 1;
+    transform: scale(1.2);
    }
- 
-   h3 {
+
+  h3 {
     margin:20px 0px -10px 0px;
     font-weight: bold; 
-     }
-
-   
+   }  
+  }
  }
 } 
+
   
 
  

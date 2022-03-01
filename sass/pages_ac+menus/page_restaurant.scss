@@ -1,0 +1,42 @@
+@import "../utils/mixin.scss";
+@import "../utils/colors.scss";
+
+img {
+   width: 100%;
+   height: 50vh;
+   object-fit: cover;
+}
+
+.m_fr {
+   background-color: $lightgrey;
+   margin-top: -40px;
+   border-radius: 10px 10px 0 0;
+   position: relative;
+ h2 {
+   margin: 20px 0 20px 5px;
+   font-family: "Shrikhand", cursive; 
+   position: relative;
+   font-weight: 500;
+ &::before {
+   @include coeur;
+  }
+ }
+}
+
+.menus_plats{
+  gap: 1rem;
+
+.box_entrees, .box_plats, .box_desserts {
+  @include shadow_acceuil ;
+  border-radius: 10px;
+  background-color: $white;
+  &h4 {
+    font-weight: 100;
+  }
+  &p{
+
+  }
+}
+
+}
+
