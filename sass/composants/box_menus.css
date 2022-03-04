@@ -38,9 +38,15 @@
   width: 5rem;
   background-color: #99E2D0;
   color: #278870;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   right: 15px;
   top: 15px;
   font-size: 16px;
@@ -88,6 +94,7 @@
 }
 
 .container_menus .menus .txt_rps::before {
+  content: "\f004";
   cursor: pointer;
   display: inline-block;
   font-style: normal;
@@ -96,22 +103,21 @@
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
-  content: "\f004";
   position: absolute;
   right: 20px;
   top: 5px;
   font-size: 25px;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
   background-clip: text;
   -webkit-background-clip: text;
   color: inherit;
   opacity: 1;
+  font-weight: 400;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
 .container_menus .menus .txt_rps::after {
+  content: "\f004";
   cursor: pointer;
   display: inline-block;
   font-style: normal;
@@ -119,18 +125,16 @@
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f004";
+  font-weight: 400;
   position: absolute;
   right: 20px;
   top: 5px;
   font-size: 25px;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
+  font-weight: 900;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));

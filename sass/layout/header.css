@@ -1,9 +1,6 @@
 header {
-  font-family: "Shrikhand", cursive;
+  font-family: "Shrikhand", "cursive";
   text-align: center;
-  -webkit-box-shadow: 0 0 0.5rem grey;
-          box-shadow: 0 0 0.5rem grey;
-  padding: 0.3rem;
   position: relative;
 }
 /*# sourceMappingURL=header.css.map */

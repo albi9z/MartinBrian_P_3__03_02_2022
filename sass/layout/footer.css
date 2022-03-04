@@ -16,4 +16,8 @@ footer p {
   color: #fff;
   margin: 5px;
 }
+
+footer p i {
+  margin-right: 10px;
+}
 /*# sourceMappingURL=footer.css.map */

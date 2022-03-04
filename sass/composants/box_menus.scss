@@ -37,8 +37,9 @@
      width: 5rem;
      background-color: $color_tertiaire;
      color: darken($color: $color_tertiaire, $amount: 40);
-     display: grid;
-     place-items: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
      right: 15px;
      top: 15px;
      font-size: 16px;
@@ -66,10 +67,8 @@
      @include coeur;
      }
   &::after{
-    @include coeur 
-    ($opacity:0, $color:transparent, $font-weight:900);
+    @include coeur ($opacity:0, $color:transparent, $font-weight:900);
     @include gradient;
-    
      }
   &:hover::after{
     opacity: 1;

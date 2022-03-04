@@ -11,26 +11,33 @@
      transform: scale(1.02);
 }
 
+@mixin icon_awesome ($font-weight:400) {
+      cursor: pointer;
+      position: absolute;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto; 
+      -webkit-font-smoothing: antialiased;
+      font-family: "Font Awesome 5 Free";
+      font-weight: $font-weight;
+      
+}
+
 @mixin coeur ($opacity:1, $color:inherit, $font-weight:400) {
-     cursor: pointer;
-     display: inline-block;
-     font-style: normal;
-     font-variant: normal;
-     text-rendering: auto; 
-     -webkit-font-smoothing: antialiased;
-     font-family: "Font Awesome 5 Free";
-     font-weight: $font-weight;
+     @include icon_awesome($font-weight:400);
      content: "\f004";
-     position: absolute;
      right: 20px;
      top: 5px;
      font-size: 25px;
-     transform: translateY(0px);
      background-clip: text;
      -webkit-background-clip: text;
      color: $color;
      opacity: $opacity;
+     font-weight: $font-weight;
      transition: all 200ms ease-in-out;
+    
+    
 }
 
 @mixin dsgn_btn {
