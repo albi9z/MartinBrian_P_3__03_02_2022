@@ -13,6 +13,11 @@
          font-size: 20px;
          }
      & .btn {
-        @include dsgn_btn;                                                                                                                                                                                                                                                                             
+         @include dsgn_btn; 
+         height: 25px;
+         display: flex;
+         align-items: center;
+         margin-left: 70px;
+         justify-content: center;                                                                                                                                                                                                                                                                            
          }
        }

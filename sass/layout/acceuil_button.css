@@ -24,6 +24,17 @@
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
   -webkit-box-shadow: 2px 1px 8px -3px black;
           box-shadow: 2px 1px 8px -3px black;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 70px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .acceuil .btn:hover {
