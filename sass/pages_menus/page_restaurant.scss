@@ -15,19 +15,20 @@ img {
 
 #fl_return {
  header { 
- &:hover { 
-   @include zoom;
- }
- &::before{
+  &:hover::before {
+    @include zoom;
+     }
+  &::before {
    @include icon_awesome ($font-weight:400);
    content: "\f060";
    font-weight: 900;
    left: 20px;
    top: 10px;
    font-size: 25px;
-   }
+   transition: transform 300ms;
   }
  }
+}
 
 
 
@@ -76,21 +77,30 @@ img {
    border-radius: 10px;
    background-color: $white;
    margin-top: 20px;
-   overflow: hidden;
+   animation: transpage 1s;
+   animation-fill-mode: both;
 
-   .box_entrees, .box_plats, .box_desserts {
-   display: flex;
+.box_entrees {
+   display: flex;  
    overflow: hidden;
    white-space: nowrap;
    text-overflow: ellipsis;
-   }
-   
+ }
+
+ @for $i from 1 through 3 {
+  &:nth-child(#{$i}) {
+  animation-delay: 100ms * $i;
+ }
+}
+ 
  .box_description{
    line-height: 30%;
+   margin: 0 10px;
    overflow: hidden;
    white-space: nowrap;
    text-overflow: ellipsis;
-   margin: 0 10px;
+  }
+
 
 /*---texte_menus_box_repas---*/
 
@@ -98,15 +108,16 @@ img {
    overflow: hidden;
    white-space: nowrap;
    text-overflow: ellipsis;
-   }
   }
+
 
  .box_prix {
    margin-left: auto;
    font-weight: bold;
    box-sizing: border-box;
-   padding: 25px 25px 0 0;
+   padding: 25px 25px 0 0;   
  }
+
  .box_check {
    display: flex;
    justify-content: center;
@@ -117,6 +128,7 @@ img {
    margin-right: -70px; 
    transition: margin-right 800ms;
  }
+
  .fas {
    background-color: $white;
    color: $color_tertiaire;
@@ -127,18 +139,17 @@ img {
    justify-content: center;
    align-items: center;
    margin-top: 25px;
- }
-
- &:hover{
+ 
+  &:hover{
    .box_check {
    margin-right: 0;
-   }
+  }
  i {
    animation: btnrps 0.5s ease-in-out; 
   }
  }
 }
- 
+
 /*---bouton_footer_commander---*/
 
 .btn_order{
@@ -152,4 +163,5 @@ img {
    justify-content: center;
    @include dsgn_btn;
  }
+}
 }

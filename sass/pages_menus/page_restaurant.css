@@ -20,6 +20,28 @@
   }
 }
 
+@-webkit-keyframes transpage {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes transpage {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 /*---images_headers_pages_restaurants---*/
 img {
   width: 100%;
@@ -30,7 +52,7 @@ img {
 }
 
 /*fleche_return_page*/
-#fl_return header:hover {
+#fl_return header:hover::before {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
 }
@@ -50,6 +72,10 @@ img {
   left: 20px;
   top: 10px;
   font-size: 25px;
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
 }
 
 /*---fond_menus_page---*/
@@ -127,15 +153,29 @@ img {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  -webkit-animation: transpage 1s;
+          animation: transpage 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.box_category .box_entrees:nth-child(1), .box_category .box_plats:nth-child(1), .box_category .box_desserts:nth-child(1) {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+.box_category .box_entrees:nth-child(2), .box_category .box_plats:nth-child(2), .box_category .box_desserts:nth-child(2) {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.box_category .box_entrees:nth-child(3), .box_category .box_plats:nth-child(3), .box_category .box_desserts:nth-child(3) {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
 }
 
 .box_category .box_description {
   line-height: 30%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   margin: 0 10px;
   /*---texte_menus_box_repas---*/
 }

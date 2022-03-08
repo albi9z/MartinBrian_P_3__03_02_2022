@@ -1,3 +1,18 @@
+.loader {
+      position: fixed;
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      height: 100vh;
+      inset: 0;
+      z-index: 2;
+      opacity: 0.9;
+      animation: loader 3s forwards;
+      & i {
+      margin-inline: auto;
+      }
+}
+
 header {
       font-family: "Shrikhand", "cursive";
       text-align: center;
