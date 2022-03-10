@@ -79,28 +79,30 @@ img {
    margin-top: 20px;
    animation: transpage 1s;
    animation-fill-mode: both;
-
-.box_entrees {
-   display: flex;  
    overflow: hidden;
    white-space: nowrap;
    text-overflow: ellipsis;
- }
 
- @for $i from 1 through 3 {
-  &:nth-child(#{$i}) {
-  animation-delay: 100ms * $i;
- }
-}
- 
+
+.box_entrees, .box_plats, .box_desserts {
+   display: flex;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;  
+
+@for $i from 1 through 3 {
+   &:nth-child(#{$i}) {
+   animation-delay: 100ms * $i;
+    }
+   }
+  }    
+
  .box_description{
    line-height: 30%;
    margin: 0 10px;
    overflow: hidden;
    white-space: nowrap;
    text-overflow: ellipsis;
-  }
-
 
 /*---texte_menus_box_repas---*/
 
@@ -109,7 +111,7 @@ img {
    white-space: nowrap;
    text-overflow: ellipsis;
   }
-
+}
 
  .box_prix {
    margin-left: auto;
@@ -127,6 +129,7 @@ img {
    width: 70px;
    margin-right: -70px; 
    transition: margin-right 800ms;
+   height: 70px;
  }
 
  .fas {
@@ -139,20 +142,24 @@ img {
    justify-content: center;
    align-items: center;
    margin-top: 25px;
- 
-  &:hover{
+  } 
+   &:hover {
    .box_check {
    margin-right: 0;
-  }
+  
  i {
    animation: btnrps 0.5s ease-in-out; 
   }
  }
 }
+}
+
+
+
 
 /*---bouton_footer_commander---*/
 
-.btn_order{
+.btn_order {
    display: flex;
    justify-content: center;
    box-sizing: border-box;
@@ -163,5 +170,4 @@ img {
    justify-content: center;
    @include dsgn_btn;
  }
-}
 }

@@ -17,6 +17,9 @@
      gap: 1.5rem;
      padding: 0 15px; 
      background-color: $white;
+  @media all and (min-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);  
+     }
 
   .repas {
      height: 330px;

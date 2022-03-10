@@ -14,9 +14,13 @@
          }
      & .btn {
          @include dsgn_btn; 
-         margin-left: 140px;
-         margin-right: 140px;
+         margin-left: 55px;
+         margin-right: 55px;
          font-size: 17px;     
-         font-weight: 400;                                                                                                                                                                                                                                                                      
-         }
+         font-weight: 400;
+     @media all and (min-width: 768px) and (max-width: 1440px) {
+         margin-left: 33%;
+         margin-right: 33%; 
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
        }
+      }

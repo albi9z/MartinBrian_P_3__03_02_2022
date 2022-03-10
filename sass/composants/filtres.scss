@@ -4,44 +4,66 @@
 @import "../utils/colors.scss";
 
 .filtres {
-     counter-reset: "filtres";
+     counter-reset: filtres;
+     box-sizing: border-box;
+     padding: 10px; 
 
-     & ol {
-         display: flex;
-         flex-direction: column;
-         gap: 1rem;
-         }
+   h2 {
+     margin-left: 10px;   
+    } 
 
-    & li {
-        position: relative;
+   & ol {
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+     margin-right: 15px;
+     margin-left: -25px;
+   @media all and (min-width: 768px) {
+     flex-direction: inherit;  
+     }
+   @media all and (min-width: 1024px) {
+     gap: 3rem;   
+ }
+}
 
-        &::before {
-         content: counter(filtres);
-         counter-increment: 'filtres';
-         color: $white;
-         background-color: $color_primaire ;
-         border-radius: 50px;
-         display: grid;
-         place-items: center;
-         position: absolute;
-         width:$acceuil-height;
-         height:$acceuil-height;
-         left: -0.5rem;
-         }
 
-         list-style-type: none;
-         background-color: $lightgrey;
-         padding: 1.5rem 2rem;
-         border-radius: 15px;
-         @include shadow_acceuil; 
+   & li {
+     position: relative;
+   @media all and (min-width: 768px) and (max-width: 1440px) {
+     padding: 20px 0px 20px 15px;
+     width: 33.3%;  
+    }
 
-        &:hover {
-         @include zoom;
-         }
+   &::before {
+     content: counter(filtres);
+     counter-increment: filtres;
+     color: $white;
+     background-color: $color_primaire ;
+     border-radius: 50px;
+     display: grid;
+     place-items: center;
+     position: absolute;
+     width:$acceuil-height;
+     height:$acceuil-height;
+     left: -0.5rem;
+     font-size: 13px;
+   }
+     list-style-type: none;
+     background-color: $lightgrey;
+     padding: 1.5rem 2rem;
+     border-radius: 15px;
+     @include shadow_acceuil; 
 
-        & i.fas{
-            margin-right: 1rem;
-            font-size: 20px;
-         }
-        }
-       }
+ &:hover {
+     @include zoom;
+    }
+
+  i.fas{
+     margin-right: 10px;
+     font-size: 20px;
+   @media all and (min-width: 768px){
+     font-size: 15px; 
+     }
+   }
+  }
+}

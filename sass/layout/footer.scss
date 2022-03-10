@@ -10,13 +10,17 @@ footer {
      color: $white;
      font-size: 20px;
      font-weight: 500;
+     margin-left: 10px;
     }
 
     p {
      color: $white;
      margin: 5px;
     & i {
-      margin-right: 10px;
+      margin-right: 10px;    
+   }
+   .fa-utensils{
+    margin-left: 5px;
    }
   }
  }
