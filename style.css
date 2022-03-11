@@ -212,14 +212,14 @@ a {
   position: fixed;
   display: flex;
   align-items: center;
-  background-color: #fff;
   height: 100vh;
   inset: 0;
   z-index: 2;
   opacity: 0.9;
-  animation: loader 5s;
-  animation-fill-mode: forwards;
-  transform-origin: top;
+  animation: loader 15s;
+  animation-fill-mode: both;
+  transform-origin: center;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
 }
 .loader::after {
   content: "";
@@ -228,9 +228,9 @@ a {
   width: 100px;
   border-radius: 50%;
   border-right: 5px solid transparent;
-  border-top: 5px solid #9356DC;
-  animation: spin 900ms ease-in-out;
-  animation-iteration-count: 4;
+  border-top: 5px solid #353535;
+  animation-iteration-count: 5;
+  animation: spin 500ms infinite;
 }
 
 header {
@@ -238,7 +238,6 @@ header {
   text-align: center;
   position: relative;
   margin: 0;
-  box-shadow: inset 0px 5px 5px 0px #dddddd;
 }
 
 .paris_belleville {
@@ -246,8 +245,9 @@ header {
   justify-content: center;
   text-align: center;
   align-items: center;
-  background-color: #f3f3f3;
+  background-color: #dfdfdf;
   padding: 0.5rem;
+  box-shadow: inset 0px 5px 5px 0px #afaeae;
 }
 .paris_belleville i {
   font-size: 25px;
@@ -444,6 +444,7 @@ img {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  /*---texte_menus_box_repas---*/
 }
 .box_category .box_entrees, .box_category .box_plats, .box_category .box_desserts {
   display: flex;
@@ -466,9 +467,8 @@ img {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  /*---texte_menus_box_repas---*/
 }
-.box_category .box_description h4 p {
+.box_category h4 p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

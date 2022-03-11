@@ -1,18 +1,18 @@
 @import "../utils/colors.scss";
 
 .loader {
-      $animation-count: 4;
+      $animation-count: 5;
       position: fixed;
       display: flex;
       align-items: center;
-      background-color: $white;
       height: 100vh;
       inset: 0;
       z-index: 2;
       opacity: 0.9;
-      animation: loader 5s;
-      animation-fill-mode: forwards;
-      transform-origin: top;
+      animation: loader 15s;    
+      animation-fill-mode: both;
+      transform-origin: center;
+      @include gradient;
       &::after {
       content: "";
       margin-inline: auto;
@@ -20,9 +20,9 @@
       width: 100px;
       border-radius: 50%;
       border-right: 5px solid transparent;
-      border-top: 5px solid $color_primaire;
-      animation: spin 900ms ease-in-out;
+      border-top: 5px solid $black;
       animation-iteration-count: $animation-count;
+      animation: spin 500ms infinite;
 
       }
 }
@@ -32,5 +32,4 @@ header {
       text-align: center;
       position: relative;
       margin: 0;
-      box-shadow: inset 0px 5px 5px 0px #dddddd;
      }
