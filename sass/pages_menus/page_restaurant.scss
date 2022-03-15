@@ -47,9 +47,9 @@ img {
    font-size: 25px;
  &::before {
    @include coeur;
-   }
-  }
  }
+ }  
+}
 
 .h2_page{
    box-sizing: border-box;
@@ -79,16 +79,17 @@ img {
    margin-top: 20px;
    animation: transpage 1s;
    animation-fill-mode: both;
-   overflow: hidden;
    white-space: nowrap;
+   overflow: hidden;
    text-overflow: ellipsis;
-
+   resize: horizontal;
 
 .box_entrees, .box_plats, .box_desserts {
    display: flex;
-   overflow: hidden;
    white-space: nowrap;
-   text-overflow: ellipsis;  
+   overflow: hidden;
+   text-overflow: ellipsis;
+   resize: horizontal;  
 
 @for $i from 1 through 3 {
    &:nth-child(#{$i}) {
@@ -100,16 +101,17 @@ img {
  .box_description{
    line-height: 30%;
    margin: 0 10px;
-   overflow: hidden;
    white-space: nowrap;
+   overflow: hidden;
    text-overflow: ellipsis;
+   resize: horizontal;
  }
 
 /*---texte_menus_box_repas---*/
 
  h4 p {
-   overflow: hidden;
    white-space: nowrap;
+   overflow: hidden;
    text-overflow: ellipsis;
   }
 

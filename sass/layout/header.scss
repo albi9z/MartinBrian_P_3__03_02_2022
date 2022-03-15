@@ -9,9 +9,9 @@
       inset: 0;
       z-index: 2;
       opacity: 0.9;
-      animation: loader 15s;    
+      animation: loader 5s;    
       animation-fill-mode: both;
-      transform-origin: center;
+      transform-origin: bottom;
       @include gradient;
       &::after {
       content: "";
