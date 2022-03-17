@@ -66,13 +66,14 @@
 .txt_rps {
      padding: 0 10px;
      position: relative;
+
   &::before {
      @include coeur;
-     }
+   }
   &::after{
     @include coeur ($opacity:0, $color:transparent, $font-weight:900);
     @include gradient;
-     }
+   }
   &:hover::after{
     opacity: 1;
     transform: scale(1.2);
@@ -81,10 +82,13 @@
   h3 {
     margin:20px 0px -10px 0px;
     font-weight: bold; 
-   }  
   }
+  p {
+    font-weight: 300;
+   } 
+   }
+  }  
  }
-} 
 
   
 

@@ -141,6 +141,9 @@ a {
   margin: 20px 0px -10px 0px;
   font-weight: bold;
 }
+.container_menus .menus .txt_rps p {
+  font-weight: 300;
+}
 
 .filtres {
   counter-reset: filtres;
@@ -186,12 +189,12 @@ a {
   counter-increment: filtres;
   color: #fff;
   background-color: #9356DC;
-  border-radius: 8px;
+  border-radius: 50%;
   display: grid;
   place-items: center;
   position: absolute;
-  width: 1rem;
-  height: 1rem;
+  width: 25px;
+  height: 25px;
   left: -0.5rem;
   font-size: 13px;
 }
@@ -199,8 +202,12 @@ a {
   transform: scale(1.02);
 }
 .filtres li i.fas {
+  color: #7e7e7e;
   margin-right: 10px;
   font-size: 20px;
+}
+.filtres li i.fas.fa-store {
+  color: #9356DC;
 }
 @media all and (min-width: 768px) {
   .filtres li i.fas {
@@ -255,15 +262,17 @@ header {
 }
 
 .acceuil {
+  height: 320px;
   background-color: #f6f6f6;
   text-align: center;
 }
 .acceuil h2 {
-  margin-top: 2rem;
+  padding: 40px 55px 0;
   font-size: 30px;
 }
 .acceuil p {
   font-size: 20px;
+  font-weight: 100;
 }
 .acceuil .btn {
   cursor: pointer;
@@ -276,8 +285,8 @@ header {
   font-size: 20px;
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
   box-shadow: 2px 1px 8px -3px black;
-  margin-left: 55px;
-  margin-right: 55px;
+  margin-left: 75px;
+  margin-right: 75px;
   font-size: 17px;
   font-weight: 400;
 }
@@ -442,18 +451,12 @@ img {
   margin-top: 20px;
   animation: transpage 1s;
   animation-fill-mode: both;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
-  resize: horizontal;
+  white-space: nowrap;
   /*---texte_menus_box_repas---*/
 }
 .box_category .box_entrees, .box_category .box_plats, .box_category .box_desserts {
   display: flex;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  resize: horizontal;
 }
 .box_category .box_entrees:nth-child(1), .box_category .box_plats:nth-child(1), .box_category .box_desserts:nth-child(1) {
   animation-delay: 100ms;
@@ -465,23 +468,26 @@ img {
   animation-delay: 300ms;
 }
 .box_category .box_description {
-  line-height: 30%;
   margin: 0 10px;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
-  resize: horizontal;
 }
-.box_category h4 p {
-  white-space: nowrap;
+.box_category p {
+  font-weight: 300;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.box_category h4 {
+  margin: 7px 0;
+  overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 .box_category .box_prix {
   margin-left: auto;
   font-weight: bold;
   box-sizing: border-box;
-  padding: 25px 25px 0 0;
+  padding: 40px 20px 0 0;
 }
 .box_category .box_check {
   display: flex;

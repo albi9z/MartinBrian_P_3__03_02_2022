@@ -39,12 +39,12 @@
      counter-increment: filtres;
      color: $white;
      background-color: $color_primaire ;
-     border-radius: 8px;
+     border-radius: 50%;
      display: grid;
      place-items: center;
      position: absolute;
-     width:$acceuil-height;
-     height:$acceuil-height;
+     width:25px;
+     height:25px;
      left: -0.5rem;
      font-size: 13px;
    }
@@ -59,8 +59,12 @@
     }
 
   i.fas{
+     color: #7e7e7e;
      margin-right: 10px;
      font-size: 20px;
+  &.fa-store{
+    color: $color_primaire;
+  }
    @media all and (min-width: 768px){
      font-size: 15px; 
      }

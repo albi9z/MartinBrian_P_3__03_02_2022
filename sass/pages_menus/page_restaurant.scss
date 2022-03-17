@@ -79,17 +79,11 @@ img {
    margin-top: 20px;
    animation: transpage 1s;
    animation-fill-mode: both;
-   white-space: nowrap;
    overflow: hidden;
-   text-overflow: ellipsis;
-   resize: horizontal;
+   white-space: nowrap;
 
 .box_entrees, .box_plats, .box_desserts {
-   display: flex;
-   white-space: nowrap;
-   overflow: hidden;
-   text-overflow: ellipsis;
-   resize: horizontal;  
+   display: flex;  
 
 @for $i from 1 through 3 {
    &:nth-child(#{$i}) {
@@ -99,27 +93,31 @@ img {
   }    
 
  .box_description{
-   line-height: 30%;
    margin: 0 10px;
-   white-space: nowrap;
    overflow: hidden;
-   text-overflow: ellipsis;
-   resize: horizontal;
  }
 
 /*---texte_menus_box_repas---*/
-
- h4 p {
-   white-space: nowrap;
-   overflow: hidden;
-   text-overflow: ellipsis;
+  p {
+    font-weight: 300;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
+
+  h4 {
+    margin: 7px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
 
  .box_prix {
    margin-left: auto;
    font-weight: bold;
    box-sizing: border-box;
-   padding: 25px 25px 0 0;   
+   padding: 40px 20px 0 0;   
  }
 
  .box_check {
