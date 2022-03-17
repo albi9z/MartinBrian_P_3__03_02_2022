@@ -267,6 +267,7 @@ header {
   text-align: center;
 }
 .acceuil h2 {
+  margin: 0;
   padding: 40px 55px 0;
   font-size: 30px;
 }
