@@ -444,6 +444,12 @@ img {
 }
 
 /*---box_repas_restaurants---*/
+@media all and (min-width: 768px) and (max-width: 1440px) {
+  .menus_plats {
+    display: flex;
+  }
+}
+
 .box_category {
   height: 70px;
   box-shadow: 2px 1px 8px -3px black;
