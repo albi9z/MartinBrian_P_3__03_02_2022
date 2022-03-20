@@ -66,17 +66,20 @@ img {
     width: 50px;
     margin-top: 5px;
     background-color: $color_tertiaire;
-  }
+ }
 }
 
 /*---box_repas_restaurants---*/
 
 .menus_plats {
-  @media all and (min-width: 768px) and (max-width: 1440px) {
-    display: flex;
- 
-   }
+  @media all and (min-width: 768px) and (max-width: 1440px) { 
+  }
+ .repas {
+  @media all and (min-width: 768px) and (max-width: 1440px) { 
+  }
+  }
 }
+
 
 .box_category {
    height: 70px;
@@ -88,21 +91,44 @@ img {
    animation-fill-mode: both;
    overflow: hidden;
    white-space: nowrap;
-
-.box_entrees, .box_plats, .box_desserts {
-   display: flex;  
-
+   @media all and (min-width: 768px) and (max-width: 1440px) { 
+  .box_category > .box_entrees, .box_plats, .box_desserts{
+      width: 33.3%;
+    }
+   
+    .box_category > .box_entrees > div:nth-child(1){background-color: aqua;}
+    .box_category > .box_plats:nth-child(2){background-color: bisque;}
+    .box_category > .box_desserts:nth-child(3){background-color: springgreen;}    
+  }
+.box_entrees {
+   display: flex;
+   @media all and (min-width: 768px) and (max-width: 1440px) { 
+  
+   }
+}
+  .box_plats {
+    display: flex;
+    @media all and (min-width: 768px) and (max-width: 1440px) {  
+     
+     }
+} 
+ .box_desserts {
+  display: flex;
+  @media all and (min-width: 768px) and (max-width: 1440px) {    
+   
+   }
+ }
+   
 @for $i from 1 through 3 {
    &:nth-child(#{$i}) {
    animation-delay: 100ms * $i;
-    }
-   }
-  }    
+  }
+ }    
 
  .box_description{
    margin: 0 10px;
    overflow: hidden;
- }
+}
 
 /*---texte_menus_box_repas---*/
   p {
@@ -110,14 +136,14 @@ img {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-  }
+}
 
   h4 {
     margin: 7px 0;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-  }
+}
 
 
  .box_prix {
@@ -125,7 +151,7 @@ img {
    font-weight: bold;
    box-sizing: border-box;
    padding: 40px 20px 0 0;   
- }
+}
 
  .box_check {
    display: flex;
@@ -137,7 +163,7 @@ img {
    margin-right: -70px; 
    transition: margin-right 800ms;
    height: 70px;
- }
+}
 
  .fas {
    background-color: $white;
@@ -149,18 +175,17 @@ img {
    justify-content: center;
    align-items: center;
    margin-top: 25px;
-  } 
-   &:hover {
+ }
+  &:hover {
    .box_check {
    margin-right: 0;
   
  i {
    animation: btnrps 0.5s ease-in-out; 
+    }
+   }
   }
- }
 }
-}
-
 
 
 
