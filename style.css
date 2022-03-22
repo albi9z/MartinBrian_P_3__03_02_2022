@@ -444,6 +444,10 @@ img {
 }
 
 /*---box_repas_restaurants---*/
+main {
+  display: flex;
+}
+
 .box_category {
   height: 70px;
   box-shadow: 2px 1px 8px -3px black;
@@ -456,27 +460,7 @@ img {
   white-space: nowrap;
   /*---texte_menus_box_repas---*/
 }
-@media all and (min-width: 768px) and (max-width: 1440px) {
-  .box_category .box_category > .box_entrees, .box_category .box_plats, .box_category .box_desserts {
-    width: 33.3%;
-  }
-  .box_category .box_category > .box_entrees > div:nth-child(1) {
-    background-color: aqua;
-  }
-  .box_category .box_category > .box_plats:nth-child(2) {
-    background-color: bisque;
-  }
-  .box_category .box_category > .box_desserts:nth-child(3) {
-    background-color: springgreen;
-  }
-}
-.box_category .box_entrees {
-  display: flex;
-}
-.box_category .box_plats {
-  display: flex;
-}
-.box_category .box_desserts {
+.box_category .box_entrees, .box_category .box_plats, .box_category .box_desserts {
   display: flex;
 }
 .box_category:nth-child(1) {
