@@ -4,7 +4,12 @@
 
 @mixin gradient {
      background-image: linear-gradient(to top, ($color_primaire),
-     ($color_secondaire));   
+     ($color_secondaire));  
+}
+
+@mixin gradient_animation {
+     opacity: 1;
+     transform: scale(1.2);  
 }
 
 @mixin zoom {

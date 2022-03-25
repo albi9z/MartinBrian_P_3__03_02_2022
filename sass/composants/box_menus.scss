@@ -75,8 +75,7 @@
     @include gradient;
    }
   &:hover::after{
-    opacity: 1;
-    transform: scale(1.2);
+    @include gradient_animation;
    }
 
   h3 {
@@ -85,7 +84,7 @@
   }
   p {
     font-weight: 300;
-   } 
+    } 
    }
   }  
  }

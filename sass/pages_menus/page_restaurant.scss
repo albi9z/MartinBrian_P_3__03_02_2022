@@ -2,6 +2,60 @@
 @import "../utils/colors.scss";
 @import "../utils/animation.scss";
 
+.loader {
+  position: fixed;
+  z-index: 1;
+  opacity: 0.9;
+  height: 100%;
+  width: 100%;
+  background-color: $black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation:anim_load 3s forwards;
+  transform-origin: center;
+ 
+ .lettre {
+ color: $color_primaire;
+ font-size: 50px;
+ letter-spacing: 10px;
+ margin-bottom: 150px;
+ animation: flash 1.2s linear infinite;
+ }
+ 
+ .lettre:nth-child(1) {
+ animation-delay: 0.1s;
+ }
+ .lettre:nth-child(2) {
+ animation-delay: 0.2s;
+ }
+ .lettre:nth-child(3) {
+ animation-delay: 0.3s;
+ }
+ .lettre:nth-child(4) {
+ animation-delay: 0.4s;
+ }
+ .lettre:nth-child(5) {
+ animation-delay: 0.5s;
+ }
+ .lettre:nth-child(6) {
+ animation-delay: 0.6s;
+ }
+ .lettre:nth-child(7) {
+ animation-delay: 0.7s;
+ }
+ .lettre:nth-child(8) {
+ animation-delay: 0.8s;
+ }
+ .lettre:nth-child(9) {
+ animation-delay: 0.9s;
+ }
+ .lettre:nth-child(10) {
+ animation-delay: 0.10s;
+ 
+  }
+ }
+
 /*---images_headers_pages_restaurants---*/
 
 img {
@@ -47,9 +101,18 @@ img {
    font-size: 25px;
  &::before {
    @include coeur;
+   @include gradient;
+ }
+
+ &::after{
+  @include coeur ($opacity:0, $color:transparent, $font-weight:900);
+  @include gradient;
+ }
+
+ &:hover::after{
+  @include gradient_animation;
  }
  }  
-}
 
 .h2_page{
    box-sizing: border-box;
@@ -59,7 +122,14 @@ img {
 .h3_epd {
    text-transform: uppercase;
    font-weight: 400;
-  &::after{
+ @media all and (min-width: 1000px) {   
+   width: 33.33%; 
+   padding: 20px;
+   box-sizing: border-box;
+  }
+}
+
+h3::after {
     content: "";
     display: block;
     height: 3px;
@@ -67,20 +137,13 @@ img {
     margin-top: 5px;
     background-color: $color_tertiaire;
  }
-}
 
 /*---box_repas_restaurants---*/
 
-main {
- display: flex;
-}
-
 .menus_plats{
-
-}
-
-.repas {
-  
+  @media all and (min-width: 1000px) { 
+    display: flex;   
+  }
 }
 
 .box_category {
@@ -96,11 +159,8 @@ main {
 
 .box_entrees, .box_plats, .box_desserts {
    display: flex;
-   @media all and (min-width: 1000px) {    
- }
 }
-
-   
+  
 @for $i from 1 through 3 {
    &:nth-child(#{$i}) {
    animation-delay: 100ms * $i;
@@ -167,6 +227,7 @@ main {
     }
    }
   }
+ }
 }
 
 /*---bouton_footer_commander---*/

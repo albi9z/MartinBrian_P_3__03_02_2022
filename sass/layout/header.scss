@@ -1,35 +1,6 @@
-@import "../utils/colors.scss";
-
-.loader {
-      $animation-count: 5;
-      position: fixed;
-      display: flex;
-      align-items: center;
-      height: 100vh;
-      inset: 0;
-      z-index: 2;
-      opacity: 0.9;
-      animation: loader 5s;    
-      animation-fill-mode: both;
-      transform-origin: bottom;
-      @include gradient;
-      &::after {
-      content: "";
-      margin-inline: auto;
-      height: 100px;
-      width: 100px;
-      border-radius: 50%;
-      border-right: 5px solid transparent;
-      border-top: 5px solid $black;
-      animation-iteration-count: $animation-count;
-      animation: spin 500ms infinite;
-
-      }
-}
-
 header {
-      font-family: "Shrikhand", "cursive";
-      text-align: center;
-      position: relative;
-      margin: 0;
-     }
+ font-family: "Shrikhand", "cursive";
+ text-align: center;
+ position: relative;
+ margin: 0;
+}

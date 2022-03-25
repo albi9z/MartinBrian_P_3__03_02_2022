@@ -215,31 +215,6 @@ a {
   }
 }
 
-.loader {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  height: 100vh;
-  inset: 0;
-  z-index: 2;
-  opacity: 0.9;
-  animation: loader 5s;
-  animation-fill-mode: both;
-  transform-origin: bottom;
-  background-image: linear-gradient(to top, #9356DC, #FF79DA);
-}
-.loader::after {
-  content: "";
-  margin-inline: auto;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  border-right: 5px solid transparent;
-  border-top: 5px solid #353535;
-  animation-iteration-count: 5;
-  animation: spin 500ms infinite;
-}
-
 header {
   font-family: "Shrikhand", "cursive";
   text-align: center;
@@ -325,22 +300,6 @@ footer p .fa-utensils {
   margin-left: 5px;
 }
 
-@keyframes loader {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(0);
-  }
-}
-@keyframes spin {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 @keyframes btnrps {
   from {
     transform: rotate(-270deg);
@@ -359,6 +318,79 @@ footer p .fa-utensils {
     opacity: 1;
   }
 }
+@keyframes flash {
+  0% {
+    color: #9356DC;
+    text-shadow: 0 0 7px #9356DC;
+  }
+  90% {
+    color: #FF79DA;
+    text-shadow: 0 0 7px #FF79DA;
+  }
+  100% {
+    color: #9356DC;
+    text-shadow: 0 0 7px #9356DC;
+  }
+}
+@keyframes anim_load {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+.loader {
+  position: fixed;
+  z-index: 1;
+  opacity: 0.9;
+  height: 100%;
+  width: 100%;
+  background-color: #353535;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: anim_load 3s forwards;
+  transform-origin: center;
+}
+.loader .lettre {
+  color: #9356DC;
+  font-size: 50px;
+  letter-spacing: 10px;
+  margin-bottom: 150px;
+  animation: flash 1.2s linear infinite;
+}
+.loader .lettre:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.loader .lettre:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loader .lettre:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.loader .lettre:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.loader .lettre:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.loader .lettre:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.loader .lettre:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.loader .lettre:nth-child(8) {
+  animation-delay: 0.8s;
+}
+.loader .lettre:nth-child(9) {
+  animation-delay: 0.9s;
+}
+.loader .lettre:nth-child(10) {
+  animation-delay: 0.1s;
+}
+
 /*---images_headers_pages_restaurants---*/
 img {
   width: 100%;
@@ -396,6 +428,7 @@ img {
   margin-top: -60px;
   padding: 15px;
   border-radius: 30px 30px 0 0;
+  /*---box_repas_restaurants---*/
 }
 .m_fr .h2_menu {
   position: relative;
@@ -423,18 +456,50 @@ img {
   opacity: 1;
   font-weight: 400;
   transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
 }
-
-.h2_page {
+.m_fr .h2_menu::after {
+  cursor: pointer;
+  position: absolute;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  right: 20px;
+  top: 5px;
+  font-size: 25px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  font-weight: 900;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+}
+.m_fr .h2_menu:hover::after {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.m_fr .h2_page {
   box-sizing: border-box;
   padding: 20px 0 0 10px;
 }
-
-.h3_epd {
+.m_fr .h3_epd {
   text-transform: uppercase;
   font-weight: 400;
 }
-.h3_epd::after {
+@media all and (min-width: 1000px) {
+  .m_fr .h3_epd {
+    width: 33.33%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+}
+.m_fr h3::after {
   content: "";
   display: block;
   height: 3px;
@@ -442,13 +507,12 @@ img {
   margin-top: 5px;
   background-color: #99E2D0;
 }
-
-/*---box_repas_restaurants---*/
-main {
-  display: flex;
+@media all and (min-width: 1000px) {
+  .m_fr .menus_plats {
+    display: flex;
+  }
 }
-
-.box_category {
+.m_fr .box_category {
   height: 70px;
   box-shadow: 2px 1px 8px -3px black;
   border-radius: 10px;
@@ -460,41 +524,41 @@ main {
   white-space: nowrap;
   /*---texte_menus_box_repas---*/
 }
-.box_category .box_entrees, .box_category .box_plats, .box_category .box_desserts {
+.m_fr .box_category .box_entrees, .m_fr .box_category .box_plats, .m_fr .box_category .box_desserts {
   display: flex;
 }
-.box_category:nth-child(1) {
+.m_fr .box_category:nth-child(1) {
   animation-delay: 100ms;
 }
-.box_category:nth-child(2) {
+.m_fr .box_category:nth-child(2) {
   animation-delay: 200ms;
 }
-.box_category:nth-child(3) {
+.m_fr .box_category:nth-child(3) {
   animation-delay: 300ms;
 }
-.box_category .box_description {
+.m_fr .box_category .box_description {
   margin: 0 10px;
   overflow: hidden;
 }
-.box_category p {
+.m_fr .box_category p {
   font-weight: 300;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.box_category h4 {
+.m_fr .box_category h4 {
   margin: 7px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.box_category .box_prix {
+.m_fr .box_category .box_prix {
   margin-left: auto;
   font-weight: bold;
   box-sizing: border-box;
   padding: 40px 20px 0 0;
 }
-.box_category .box_check {
+.m_fr .box_category .box_check {
   display: flex;
   justify-content: center;
   background-color: #99E2D0;
@@ -505,7 +569,7 @@ main {
   transition: margin-right 800ms;
   height: 70px;
 }
-.box_category .fas {
+.m_fr .box_category .fas {
   background-color: #fff;
   color: #99E2D0;
   border-radius: 50%;
@@ -516,10 +580,10 @@ main {
   align-items: center;
   margin-top: 25px;
 }
-.box_category:hover .box_check {
+.m_fr .box_category:hover .box_check {
   margin-right: 0;
 }
-.box_category:hover .box_check i {
+.m_fr .box_category:hover .box_check i {
   animation: btnrps 0.5s ease-in-out;
 }
 
@@ -550,22 +614,6 @@ main {
   opacity: 0.9;
 }
 
-@keyframes loader {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(0);
-  }
-}
-@keyframes spin {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 @keyframes btnrps {
   from {
     transform: rotate(-270deg);
@@ -582,6 +630,28 @@ main {
   to {
     transform: translateY(1%);
     opacity: 1;
+  }
+}
+@keyframes flash {
+  0% {
+    color: #9356DC;
+    text-shadow: 0 0 7px #9356DC;
+  }
+  90% {
+    color: #FF79DA;
+    text-shadow: 0 0 7px #FF79DA;
+  }
+  100% {
+    color: #9356DC;
+    text-shadow: 0 0 7px #9356DC;
+  }
+}
+@keyframes anim_load {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
   }
 }
 
