@@ -19,6 +19,7 @@ a {
   padding: 50px 0 0 20px;
 }
 .container_menus .menus {
+  display: -ms-grid;
   display: grid;
   gap: 1.5rem;
   padding: 0 15px;
@@ -30,6 +31,7 @@ a {
 @media all and (min-width: 1024px) {
   .container_menus .menus {
     grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: repeat(2, 1fr);
   }
 }
 .container_menus .menus .repas {
@@ -180,7 +182,7 @@ a {
 }
 @media all and (min-width: 768px) and (max-width: 1440px) {
   .filtres li {
-    padding: 20px 0px 20px 25px;
+    padding: 20px 0px 20px 23px;
     width: 33.3%;
   }
 }
@@ -190,6 +192,7 @@ a {
   color: #fff;
   background-color: #9356DC;
   border-radius: 50%;
+  display: -ms-grid;
   display: grid;
   place-items: center;
   position: absolute;
@@ -334,9 +337,11 @@ footer p .fa-utensils {
 }
 @keyframes anim_load {
   from {
+    opacity: 1;
     transform: scale(1);
   }
   to {
+    opacity: 0;
     transform: scale(0);
   }
 }
@@ -350,8 +355,9 @@ footer p .fa-utensils {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: anim_load 3s forwards;
-  transform-origin: center;
+  animation: anim_load 3s;
+  animation-fill-mode: forwards;
+  transform-origin: top;
 }
 .loader .lettre {
   color: #9356DC;
@@ -359,36 +365,6 @@ footer p .fa-utensils {
   letter-spacing: 10px;
   margin-bottom: 150px;
   animation: flash 1.2s linear infinite;
-}
-.loader .lettre:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.loader .lettre:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.loader .lettre:nth-child(3) {
-  animation-delay: 0.3s;
-}
-.loader .lettre:nth-child(4) {
-  animation-delay: 0.4s;
-}
-.loader .lettre:nth-child(5) {
-  animation-delay: 0.5s;
-}
-.loader .lettre:nth-child(6) {
-  animation-delay: 0.6s;
-}
-.loader .lettre:nth-child(7) {
-  animation-delay: 0.7s;
-}
-.loader .lettre:nth-child(8) {
-  animation-delay: 0.8s;
-}
-.loader .lettre:nth-child(9) {
-  animation-delay: 0.9s;
-}
-.loader .lettre:nth-child(10) {
-  animation-delay: 0.1s;
 }
 
 /*---images_headers_pages_restaurants---*/
@@ -648,9 +624,11 @@ img {
 }
 @keyframes anim_load {
   from {
+    opacity: 1;
     transform: scale(1);
   }
   to {
+    opacity: 0;
     transform: scale(0);
   }
 }
