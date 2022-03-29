@@ -31,7 +31,6 @@ a {
 @media all and (min-width: 1024px) {
   .container_menus .menus {
     grid-template-columns: repeat(2, 1fr);
-    -ms-grid-columns: repeat(2, 1fr);
   }
 }
 .container_menus .menus .repas {
