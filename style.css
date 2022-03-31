@@ -31,6 +31,7 @@ a {
 @media all and (min-width: 1024px) {
   .container_menus .menus {
     grid-template-columns: repeat(2, 1fr);
+    -ms-grid-template-columns: repeat(2, 1fr);
   }
 }
 .container_menus .menus .repas {
@@ -335,27 +336,25 @@ footer p .fa-utensils {
   }
 }
 @keyframes anim_load {
-  from {
+  0% {
     opacity: 1;
-    transform: scale(1);
   }
-  to {
+  100% {
     opacity: 0;
-    transform: scale(0);
+    z-index: -10;
   }
 }
 .loader {
   position: fixed;
   z-index: 1;
-  opacity: 0.9;
+  opacity: 1;
   height: 100%;
   width: 100%;
-  background-color: #353535;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: anim_load 3s;
-  animation-fill-mode: forwards;
+  animation: 3s 3s anim_load forwards;
   transform-origin: top;
 }
 .loader .lettre {
@@ -622,13 +621,12 @@ img {
   }
 }
 @keyframes anim_load {
-  from {
+  0% {
     opacity: 1;
-    transform: scale(1);
   }
-  to {
+  100% {
     opacity: 0;
-    transform: scale(0);
+    z-index: -10;
   }
 }
 

@@ -34,12 +34,11 @@
 }
 
 @keyframes anim_load {
-  from { 
-     opacity: 1;
-     transform: scale(1);
-  }
-  to {
-     opacity: 0;
-     transform: scale(0);
-  }
+    0% { 
+       opacity: 1;  
+    }
+    100% {
+       opacity: 0;
+       z-index: -10;
+    }
 }

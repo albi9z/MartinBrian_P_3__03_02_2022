@@ -5,17 +5,15 @@
 .loader {
   position: fixed;
   z-index: 1;
-  opacity: 0.9;
+  opacity: 1;
   height: 100%;
   width: 100%;
   background-color: $white;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation:anim_load 3s;
-  animation-fill-mode: forwards;
+  animation: 3s 3s anim_load forwards;
   transform-origin: top;
-
   
  
  .lettre {
