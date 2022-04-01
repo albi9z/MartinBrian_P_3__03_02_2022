@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@hint/configuration-web-recommended": "^8.2.8",
+    "hint": "^6.1.11",
     "postcss": "^8.4.12",
     "postcss-cli": "^9.1.0"
   }
