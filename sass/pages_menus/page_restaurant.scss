@@ -89,14 +89,17 @@ img {
 }
 
 .h3_epd {
-   text-transform: uppercase;
    font-weight: 400;
  @media all and (min-width: 1000px) {   
    width: 33.33%; 
    padding: 20px;
    box-sizing: border-box;
   }
+.h3{
+  text-transform: uppercase;
+ }
 }
+
 
 h3::after {
     content: "";

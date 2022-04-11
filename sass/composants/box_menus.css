@@ -20,6 +20,14 @@
   /*---texte_repas---*/
 }
 
+@media all and (min-width: 1024px) {
+  .container_menus .menus {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .container_menus .menus .repas {
   height: 330px;
   border-radius: 20px;
@@ -94,8 +102,8 @@
 }
 
 .container_menus .menus .txt_rps::before {
-  content: "\f004";
   cursor: pointer;
+  position: absolute;
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -103,7 +111,7 @@
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
-  position: absolute;
+  content: "\f004";
   right: 20px;
   top: 5px;
   font-size: 25px;
@@ -117,8 +125,8 @@
 }
 
 .container_menus .menus .txt_rps::after {
-  content: "\f004";
   cursor: pointer;
+  position: absolute;
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -126,7 +134,7 @@
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
-  position: absolute;
+  content: "\f004";
   right: 20px;
   top: 5px;
   font-size: 25px;
@@ -150,5 +158,9 @@
 .container_menus .menus .txt_rps h3 {
   margin: 20px 0px -10px 0px;
   font-weight: bold;
+}
+
+.container_menus .menus .txt_rps p {
+  font-weight: 300;
 }
 /*# sourceMappingURL=box_menus.css.map */

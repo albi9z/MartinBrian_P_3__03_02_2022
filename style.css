@@ -472,6 +472,9 @@ img {
     box-sizing: border-box;
   }
 }
+.m_fr .h3_epd .h3 {
+  text-transform: uppercase;
+}
 .m_fr h3::after {
   content: "";
   display: block;

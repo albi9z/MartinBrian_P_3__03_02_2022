@@ -1,45 +1,130 @@
 @-webkit-keyframes btnrps {
-  0% {
+  from {
     -webkit-transform: rotate(-270deg);
             transform: rotate(-270deg);
   }
-  100% {
+  to {
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
 }
 
 @keyframes btnrps {
-  0% {
+  from {
     -webkit-transform: rotate(-270deg);
             transform: rotate(-270deg);
   }
-  100% {
+  to {
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
 }
 
 @-webkit-keyframes transpage {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+  from {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
   }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+  to {
+    -webkit-transform: translateY(1%);
+            transform: translateY(1%);
+    opacity: 1;
   }
 }
 
 @keyframes transpage {
+  from {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(1%);
+            transform: translateY(1%);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes flash {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    color: #9356DC;
+    text-shadow: 0 0 7px #9356DC;
+  }
+  90% {
+    color: #FF79DA;
+    text-shadow: 0 0 7px #FF79DA;
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    color: #9356DC;
+    text-shadow: 0 0 7px #9356DC;
   }
+}
+
+@keyframes flash {
+  0% {
+    color: #9356DC;
+    text-shadow: 0 0 7px #9356DC;
+  }
+  90% {
+    color: #FF79DA;
+    text-shadow: 0 0 7px #FF79DA;
+  }
+  100% {
+    color: #9356DC;
+    text-shadow: 0 0 7px #9356DC;
+  }
+}
+
+@-webkit-keyframes anim_load {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
+@keyframes anim_load {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
+.loader {
+  position: fixed;
+  z-index: 1;
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: 3s 3s anim_load forwards;
+          animation: 3s 3s anim_load forwards;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.loader .lettre {
+  color: #9356DC;
+  font-size: 50px;
+  letter-spacing: 10px;
+  margin-bottom: 150px;
+  -webkit-animation: flash 1.2s linear infinite;
+          animation: flash 1.2s linear infinite;
 }
 
 /*---images_headers_pages_restaurants---*/
@@ -85,6 +170,7 @@ img {
   margin-top: -60px;
   padding: 15px;
   border-radius: 30px 30px 0 0;
+  /*---box_repas_restaurants---*/
 }
 
 .m_fr .h2_menu {
@@ -115,20 +201,65 @@ img {
   font-weight: 400;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
 }
 
-.h2_page {
+.m_fr .h2_menu::after {
+  cursor: pointer;
+  position: absolute;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  right: 20px;
+  top: 5px;
+  font-size: 25px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  font-weight: 900;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+}
+
+.m_fr .h2_menu:hover::after {
+  opacity: 1;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.m_fr .h2_page {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 20px 0 0 10px;
 }
 
-.h3_epd {
-  text-transform: uppercase;
+.m_fr .h3_epd {
   font-weight: 400;
 }
 
-.h3_epd::after {
+@media all and (min-width: 1000px) {
+  .m_fr .h3_epd {
+    width: 33.33%;
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+.m_fr .h3_epd .h3 {
+  text-transform: uppercase;
+}
+
+.m_fr h3::after {
   content: "";
   display: block;
   height: 3px;
@@ -137,64 +268,79 @@ img {
   background-color: #99E2D0;
 }
 
-/*---box_repas_restaurants---*/
-.box_category {
+@media all and (min-width: 1000px) {
+  .m_fr .menus_plats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.m_fr .box_category {
   height: 70px;
   -webkit-box-shadow: 2px 1px 8px -3px black;
           box-shadow: 2px 1px 8px -3px black;
   border-radius: 10px;
   background-color: #fff;
   margin-top: 20px;
-  overflow: hidden;
-}
-
-.box_category .box_entrees, .box_category .box_plats, .box_category .box_desserts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
   -webkit-animation: transpage 1s;
           animation: transpage 1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
+  overflow: hidden;
+  white-space: nowrap;
+  /*---texte_menus_box_repas---*/
 }
 
-.box_category .box_entrees:nth-child(1), .box_category .box_plats:nth-child(1), .box_category .box_desserts:nth-child(1) {
+.m_fr .box_category .box_entrees, .m_fr .box_category .box_plats, .m_fr .box_category .box_desserts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.m_fr .box_category:nth-child(1) {
   -webkit-animation-delay: 100ms;
           animation-delay: 100ms;
 }
 
-.box_category .box_entrees:nth-child(2), .box_category .box_plats:nth-child(2), .box_category .box_desserts:nth-child(2) {
+.m_fr .box_category:nth-child(2) {
   -webkit-animation-delay: 200ms;
           animation-delay: 200ms;
 }
 
-.box_category .box_entrees:nth-child(3), .box_category .box_plats:nth-child(3), .box_category .box_desserts:nth-child(3) {
+.m_fr .box_category:nth-child(3) {
   -webkit-animation-delay: 300ms;
           animation-delay: 300ms;
 }
 
-.box_category .box_description {
-  line-height: 30%;
+.m_fr .box_category .box_description {
   margin: 0 10px;
-  /*---texte_menus_box_repas---*/
+  overflow: hidden;
 }
 
-.box_category .box_description h4 p {
+.m_fr .box_category p {
+  font-weight: 300;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.box_category .box_prix {
+.m_fr .box_category h4 {
+  margin: 7px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.m_fr .box_category .box_prix {
   margin-left: auto;
   font-weight: bold;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 25px 25px 0 0;
+  padding: 40px 20px 0 0;
 }
 
-.box_category .box_check {
+.m_fr .box_category .box_check {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -209,9 +355,10 @@ img {
   margin-right: -70px;
   -webkit-transition: margin-right 800ms;
   transition: margin-right 800ms;
+  height: 70px;
 }
 
-.box_category .fas {
+.m_fr .box_category .fas {
   background-color: #fff;
   color: #99E2D0;
   border-radius: 50%;
@@ -229,11 +376,11 @@ img {
   margin-top: 25px;
 }
 
-.box_category:hover .box_check {
+.m_fr .box_category:hover .box_check {
   margin-right: 0;
 }
 
-.box_category:hover i {
+.m_fr .box_category:hover .box_check i {
   -webkit-animation: btnrps 0.5s ease-in-out;
           animation: btnrps 0.5s ease-in-out;
 }

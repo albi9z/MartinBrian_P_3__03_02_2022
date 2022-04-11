@@ -1,14 +1,18 @@
 .acceuil {
+  height: 320px;
+  background-color: #f6f6f6;
   text-align: center;
 }
 
 .acceuil h2 {
-  margin-top: 2rem;
+  margin: 0;
+  padding: 40px 55px 0;
   font-size: 30px;
 }
 
 .acceuil p {
   font-size: 20px;
+  font-weight: 100;
 }
 
 .acceuil .btn {
@@ -24,22 +28,22 @@
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
   -webkit-box-shadow: 2px 1px 8px -3px black;
           box-shadow: 2px 1px 8px -3px black;
-  height: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 70px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-left: 75px;
+  margin-right: 75px;
+  font-size: 17px;
+  font-weight: 400;
 }
 
 .acceuil .btn:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
   opacity: 0.9;
+}
+
+@media all and (min-width: 768px) and (max-width: 1440px) {
+  .acceuil .btn {
+    margin-left: 33%;
+    margin-right: 33%;
+  }
 }
 /*# sourceMappingURL=acceuil_button.css.map */

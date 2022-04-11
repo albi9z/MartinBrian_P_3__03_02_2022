@@ -1,5 +1,12 @@
 .filtres {
-  counter-reset: "filtres";
+  counter-reset: filtres;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+}
+
+.filtres h2 {
+  margin-left: 10px;
 }
 
 .filtres ol {
@@ -11,6 +18,23 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1rem;
+  margin-right: 15px;
+  margin-left: -25px;
+}
+
+@media all and (min-width: 768px) {
+  .filtres ol {
+    -webkit-box-orient: inherit;
+    -webkit-box-direction: inherit;
+        -ms-flex-direction: inherit;
+            flex-direction: inherit;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .filtres ol {
+    gap: 3rem;
+  }
 }
 
 .filtres li {
@@ -23,19 +47,27 @@
           box-shadow: 2px 1px 8px -3px black;
 }
 
+@media all and (min-width: 768px) and (max-width: 1440px) {
+  .filtres li {
+    padding: 20px 0px 20px 23px;
+    width: 33.3%;
+  }
+}
+
 .filtres li::before {
   content: counter(filtres);
-  counter-increment: 'filtres';
+  counter-increment: filtres;
   color: #fff;
   background-color: #9356DC;
-  border-radius: 50px;
+  border-radius: 50%;
   display: -ms-grid;
   display: grid;
   place-items: center;
   position: absolute;
-  width: 1rem;
-  height: 1rem;
+  width: 25px;
+  height: 25px;
   left: -0.5rem;
+  font-size: 13px;
 }
 
 .filtres li:hover {
@@ -44,7 +76,18 @@
 }
 
 .filtres li i.fas {
-  margin-right: 1rem;
+  color: #7e7e7e;
+  margin-right: 10px;
   font-size: 20px;
+}
+
+.filtres li i.fas.fa-store {
+  color: #9356DC;
+}
+
+@media all and (min-width: 768px) {
+  .filtres li i.fas {
+    font-size: 15px;
+  }
 }
 /*# sourceMappingURL=filtres.css.map */
